@@ -1,0 +1,42 @@
+.education {
+  padding: 4.25rem 2rem;
+  background: transparent;
+}
+
+.education h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.education-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+  padding: 2rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--glow-accent);
+}
+
+.education-card h3 {
+  font-size: 1.45rem;
+  margin: 0 0 .5rem 0;
+  color: var(--text);
+}
+
+.education-card h4 {
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--primary);
+  font-weight: 500;
+}
