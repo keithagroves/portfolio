@@ -6,6 +6,7 @@ interface Project {
   period: string
   description: string[]
   link?: string
+  videoUrl?: string
 }
 
 export function Projects() {
@@ -30,8 +31,10 @@ export function Projects() {
         'Developed educational platform teaching AI and machine learning concepts to K-12 students using Jupyter Notebooks',
         'Created hands-on curriculum covering neural networks, computer vision, and NLP using Keras/TensorFlow',
         'Partnered with two nonprofit organizations to deliver AI literacy programs to underserved communities',
-        'Designed interactive projects enabling students to build and train their own AI models'
-      ]
+        'Designed interactive projects enabling students to build and train their own AI models',
+        'Built “Abel”, a talking AI avatar, to demonstrate conversational AI concepts to students'
+      ],
+      videoUrl: 'https://youtu.be/LFDjk6pIy4c?si=U31cKn55w0XJrTXk'
     }
   ]
 
@@ -60,6 +63,18 @@ export function Projects() {
                     className="project-link"
                   >
                     Visit site<span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              )}
+              {project.videoUrl && (
+                <div className="project-links">
+                  <a
+                    href={project.videoUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="project-link"
+                  >
+                    Watch Abel demo<span aria-hidden="true">▶</span>
                   </a>
                 </div>
               )}
