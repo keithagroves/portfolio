@@ -3,31 +3,14 @@
 }
 
 :root {
-  /* Typography */
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Typography - Anthropic inspired */
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Dark, playful blue + coral palette with strong contrast */
-  --bg: #050816;
-  --bg-2: #060b1f;
-  --surface: #080f24;
-  --surface-2: #091124;
-  --text: #f9fbff;
-  --muted: #b3c0de;
-  --border: #1f2a45;
-  --primary: #3b82f6; /* bright, friendly blue */
-  --primary-600: #2563eb;
-  --accent: #ffffff; /* warm coral/orange accent */
-  --accent-600: #ea580c;
-  --ring: #facc15; /* golden focus ring */
-  --shadow: 0 10px 30px -12px rgba(0,0,0,0.75);
-  --glow-primary: 0 0 26px rgba(59, 130, 246, 0.35);
-  --glow-accent: 0 0 26px rgba(249, 115, 22, 0.38);
 
   /* Spacing scale */
   --space-xs: 0.25rem;
@@ -46,8 +29,55 @@
 
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.45);
   --shadow-strong: 0 25px 80px rgba(0, 0, 0, 0.75);
+}
+
+/* Dark theme (default) - Anthropic dark palette */
+:root,
+[data-theme='dark'] {
+  --bg: #181818;
+  --bg-2: #151515;
+  --surface: #1f1f1f;
+  --surface-2: #272727;
+  --text: #eeeeee;
+  --muted: #8b8b8b;
+  --muted-light: #acacac;
+  --border: #303030;
+  --primary: #f6821e;
+  --primary-600: #974703;
+  --accent: #fdc99c;
+  --accent-600: #c96a00;
+  --accent-secondary: hsl(210, 70.9%, 51.6%);
+  --accent-pro: hsl(251, 40%, 45.1%);
+  --ring: #fdc99c;
+  --shadow: 0 10px 30px -12px rgba(0,0,0,0.75);
+  --glow-primary: 0 0 26px rgba(246, 130, 30, 0.25);
+  --glow-accent: 0 0 26px rgba(253, 201, 156, 0.2);
 
   color-scheme: dark;
+}
+
+/* Light theme - Anthropic warm tan palette */
+[data-theme='light'] {
+  --bg: hsl(48, 33.3%, 97.1%);
+  --bg-2: hsl(53, 28.6%, 94.5%);
+  --surface: hsl(0, 0%, 100%);
+  --surface-2: hsl(48, 25%, 92.2%);
+  --text: rgb(20, 20, 19);
+  --muted: hsl(51, 3.1%, 43.7%);
+  --muted-light: hsl(60, 2.5%, 23.3%);
+  --border: hsl(50, 20.7%, 88.6%);
+  --primary: hsl(15, 54.2%, 51.2%);
+  --primary-600: hsl(15, 63.1%, 42%);
+  --accent: hsl(15, 63.1%, 59.6%);
+  --accent-600: hsl(15, 70%, 45%);
+  --accent-secondary: hsl(210, 73.7%, 40.2%);
+  --accent-pro: hsl(251, 34.2%, 33.3%);
+  --ring: hsl(15, 63.1%, 59.6%);
+  --shadow: 0 10px 30px -12px rgba(20, 20, 19, 0.12);
+  --glow-primary: 0 0 26px rgba(196, 107, 65, 0.15);
+  --glow-accent: 0 0 26px rgba(196, 107, 65, 0.12);
+
+  color-scheme: light;
 }
 
 html, body {
@@ -64,19 +94,53 @@ html {
 
 /* Electric layered background (subtle, performant) */
 body {
+  transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+[data-theme='dark'] body {
   background-image:
-    radial-gradient(60% 80% at 50% -10%, rgba(59, 130, 246, 0.22), transparent 60%),
-    radial-gradient(45% 65% at 80% 120%, rgba(249, 115, 22, 0.14), transparent 60%),
+    radial-gradient(60% 80% at 50% -10%, rgba(246, 130, 30, 0.12), transparent 60%),
+    radial-gradient(45% 65% at 80% 120%, rgba(253, 201, 156, 0.08), transparent 60%),
     linear-gradient(transparent, transparent),
     /* Grid overlay */
     linear-gradient(
       to bottom,
-      rgba(255,255,255,0.04) 1px,
+      rgba(255,255,255,0.03) 1px,
       transparent 1px
     ),
     linear-gradient(
       to right,
-      rgba(255,255,255,0.035) 1px,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px
+    );
+  background-size:
+    1200px 900px,
+    1000px 800px,
+    100% 100%,
+    100% 32px,
+    32px 100%;
+  background-position:
+    50% 0,
+    50% 100%,
+    0 0,
+    0 0,
+    0 0;
+}
+
+[data-theme='light'] body {
+  background-image:
+    radial-gradient(60% 80% at 50% -10%, rgba(196, 107, 65, 0.06), transparent 60%),
+    radial-gradient(45% 65% at 80% 120%, rgba(196, 107, 65, 0.04), transparent 60%),
+    linear-gradient(transparent, transparent),
+    /* Subtle grid overlay */
+    linear-gradient(
+      to bottom,
+      rgba(20, 20, 19, 0.015) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      rgba(20, 20, 19, 0.01) 1px,
       transparent 1px
     );
   background-size:
@@ -126,6 +190,11 @@ a:hover {
   background: rgba(34, 211, 238, 0.6);
 }
 
+[data-theme='light'] ::selection {
+  color: var(--surface-2);
+  background: rgba(217, 119, 6, 0.3);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -151,6 +220,22 @@ a:hover {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--bg-2);
+}
+
+[data-theme='light'] ::-webkit-scrollbar-track {
+  background: var(--bg-2);
+  border-left: 1px solid var(--border);
+}
+
+[data-theme='light'] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-2);
+}
+
+[data-theme='light'] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--primary-600) 0%, var(--accent-600) 100%);
+  box-shadow: var(--glow-primary);
 }
 
 /* Scroll Animations */

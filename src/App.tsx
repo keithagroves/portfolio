@@ -5,11 +5,13 @@ import { Experience } from './components/Experience'
 import { Projects } from './components/Projects'
 import { Education } from './components/Education'
 import { Footer } from './components/Footer'
+import { ThemeToggle } from './components/ThemeToggle'
 import './App.css'
 
 function App() {
   return (
     <div className="app">
+      <ThemeToggle />
       <Header />
       <About />
       <Skills />

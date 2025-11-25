@@ -18,7 +18,7 @@
 
 .project-card {
   position: relative;
-  background: radial-gradient(circle at 0% 0%, rgba(14, 165, 233, 0.18), transparent 55%),
+  background: radial-gradient(circle at 0% 0%, rgba(246, 130, 30, 0.1), transparent 55%),
     linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   padding: var(--space-xl) var(--space-lg);
   border-radius: var(--radius-lg);
@@ -32,12 +32,22 @@
     background .35s ease;
 }
 
+[data-theme='light'] .project-card {
+  background: radial-gradient(circle at 0% 0%, rgba(196, 107, 65, 0.05), transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+}
+
 .project-card:hover {
   transform: translateY(-8px) scale(1.01);
   border-color: var(--accent);
   box-shadow: var(--shadow-strong), var(--glow-accent);
-  background: radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.22), transparent 60%),
+  background: radial-gradient(circle at 0% 0%, rgba(246, 130, 30, 0.15), transparent 60%),
     linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.025));
+}
+
+[data-theme='light'] .project-card:hover {
+  background: radial-gradient(circle at 0% 0%, rgba(196, 107, 65, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.025), rgba(0,0,0,0.015));
 }
 
 .project-header { margin-bottom: .75rem; }
@@ -79,9 +89,9 @@
   font-weight: 500;
   padding: 0.4rem 0.85rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(34, 197, 94, 0.35);
-  background: radial-gradient(circle at 0% 0%, rgba(34, 197, 94, 0.12), transparent 55%),
-    rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(246, 130, 30, 0.35);
+  background: radial-gradient(circle at 0% 0%, rgba(246, 130, 30, 0.12), transparent 55%),
+    var(--surface);
   color: var(--text);
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -96,8 +106,8 @@
 
 .project-link:hover {
   border-color: var(--accent);
-  background: radial-gradient(circle at 0% 0%, rgba(34, 197, 94, 0.2), transparent 60%),
-    rgba(15, 23, 42, 0.9);
+  background: radial-gradient(circle at 0% 0%, rgba(246, 130, 30, 0.2), transparent 60%),
+    var(--surface-2);
   transform: translateY(-1px);
   box-shadow: var(--glow-accent);
 }

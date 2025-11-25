@@ -9,9 +9,14 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(600px 400px at 15% 20%, rgba(34,211,238,0.18), transparent 70%),
-    radial-gradient(800px 500px at 85% 60%, rgba(139,92,246,0.20), transparent 75%);
+  background: radial-gradient(600px 400px at 15% 20%, rgba(246, 130, 30, 0.1), transparent 70%),
+    radial-gradient(800px 500px at 85% 60%, rgba(253, 201, 156, 0.08), transparent 75%);
   opacity: .55;
+}
+
+[data-theme='light'] .about::before {
+  background: radial-gradient(600px 400px at 15% 20%, rgba(196, 107, 65, 0.06), transparent 70%),
+    radial-gradient(800px 500px at 85% 60%, rgba(196, 107, 65, 0.04), transparent 75%);
 }
 
 .about h2 {

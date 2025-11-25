@@ -25,6 +25,16 @@ export function Projects() {
       link: 'https://enactprotocol.com'
     },
     {
+      title: 'Rocket Music Platform',
+      period: 'January 2024 – Present',
+      description: [
+        'Built comprehensive web-based music education platform for guitar and piano instruction with role-based access for students, teachers, and administrators',
+        'Implemented real-time audio processing using Web Audio API for recording, playback, and pitch detection with professional-quality instrument capture',
+        'Developed audio-to-MIDI transcription pipeline using Spotify\'s Basic Pitch for automated performance analysis and grading',
+        'Architected multi-tenant course management system with hierarchical lesson structures, progress tracking, and interactive sheet music rendering'
+      ]
+    },
+    {
       title: 'Think Machine',
       period: 'February 2023 – December 2024',
       description: [
@@ -32,7 +42,7 @@ export function Projects() {
         'Created hands-on curriculum covering neural networks, computer vision, and NLP using Keras/TensorFlow',
         'Partnered with two nonprofit organizations to deliver AI literacy programs to underserved communities',
         'Designed interactive projects enabling students to build and train their own AI models',
-        'Built “Abel”, a talking AI avatar, to demonstrate conversational AI concepts to students'
+        'Built "Abel", a talking AI avatar, to demonstrate conversational AI concepts to students'
       ],
       videoUrl: 'https://youtu.be/LFDjk6pIy4c?si=U31cKn55w0XJrTXk'
     }

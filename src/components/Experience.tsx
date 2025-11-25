@@ -16,7 +16,7 @@ export function Experience() {
     {
       title: 'Software Consultant',
       company: 'Neopolis.ai',
-      period: 'March 2024 – Present',
+      period: 'March 2025 – September 2025',
       website: 'https://neopolis.ai',
       highlights: [
         'Building AI-powered platform for automated interviews and hiring workflows',
@@ -28,7 +28,7 @@ export function Experience() {
     {
       title: 'Security Consultant',
       company: 'Biorbank/BiorVault',
-      period: 'August 2024 – Present',
+      period: 'August 2025 – Present',
   website: 'https://biorlabs.com',
       highlights: [
         'Conducted security audit of biobank infrastructure and data handling processes',

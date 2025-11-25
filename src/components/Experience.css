@@ -45,6 +45,10 @@
   cursor: pointer;
 }
 
+[data-theme='light'] .job {
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+}
+
 .job::before {
   content: "";
   position: absolute;
@@ -54,7 +58,7 @@
   height: 12px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.25), 0 0 12px 4px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 0 0 4px rgba(246, 130, 30, 0.2), 0 0 12px 4px rgba(246, 130, 30, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -62,15 +66,19 @@
   transform: translateY(-8px) scale(1.01);
   border-color: var(--accent);
   box-shadow: var(--glow-accent),
-              0 20px 60px -15px rgba(14, 165, 233, 0.3),
-              0 0 0 1px rgba(34, 197, 94, 0.2);
+              0 20px 60px -15px rgba(246, 130, 30, 0.2),
+              0 0 0 1px rgba(253, 201, 156, 0.2);
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+}
+
+[data-theme='light'] .job:hover {
+  background: linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.015));
 }
 
 .job:hover::before {
   width: 16px;
   height: 16px;
-  box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.3), 0 0 20px 6px rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 0 6px rgba(246, 130, 30, 0.25), 0 0 20px 6px rgba(246, 130, 30, 0.35);
 }
 
 .job-header {
