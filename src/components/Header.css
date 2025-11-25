@@ -9,14 +9,14 @@
 
 [data-theme='dark'] .header {
   background:
-    radial-gradient(circle at 50% 40%, rgba(246, 130, 30, 0.15), transparent 70%),
-    linear-gradient(135deg, #272727, #1f1f1f);
+    radial-gradient(circle at 50% 40%, rgba(143, 188, 143, 0.1), transparent 70%),
+    linear-gradient(135deg, #1e3029, #162320);
 }
 
 [data-theme='light'] .header {
   background:
-    radial-gradient(circle at 50% 40%, rgba(196, 107, 65, 0.08), transparent 70%),
-    linear-gradient(135deg, hsl(48, 33.3%, 97.1%), hsl(53, 28.6%, 94.5%));
+    radial-gradient(circle at 50% 40%, rgba(90, 138, 90, 0.08), transparent 70%),
+    linear-gradient(135deg, #f8f6f0, #f0ede4);
 }
 
 /* Animated accent lines */
@@ -28,24 +28,24 @@
 }
 
 .header::before {
-  background: repeating-linear-gradient(45deg, rgba(246, 130, 30, 0.05) 0 12px, transparent 12px 24px);
+  background: repeating-linear-gradient(45deg, rgba(143, 188, 143, 0.04) 0 12px, transparent 12px 24px);
   mix-blend-mode: overlay;
   opacity: .6;
   animation: drift 18s linear infinite;
 }
 
 [data-theme='light'] .header::before {
-  background: repeating-linear-gradient(45deg, rgba(196, 107, 65, 0.03) 0 12px, transparent 12px 24px);
+  background: repeating-linear-gradient(45deg, rgba(90, 138, 90, 0.03) 0 12px, transparent 12px 24px);
 }
 
 .header::after {
-  background: radial-gradient(600px 400px at 50% 10%, rgba(246, 130, 30, 0.15), transparent 70%);
+  background: radial-gradient(600px 400px at 50% 10%, rgba(143, 188, 143, 0.12), transparent 70%);
   filter: blur(40px);
   opacity: .4;
 }
 
 [data-theme='light'] .header::after {
-  background: radial-gradient(600px 400px at 50% 10%, rgba(196, 107, 65, 0.08), transparent 70%);
+  background: radial-gradient(600px 400px at 50% 10%, rgba(90, 138, 90, 0.08), transparent 70%);
 }
 
 @keyframes heroGradient {
