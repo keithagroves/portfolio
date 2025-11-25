@@ -1,10 +1,26 @@
 import './Header.css'
 
+function Name() {
+  const name = "Keith Groves"
+  return (
+    <h1 aria-label={name}>
+      {name.split('').map((letter, index) => (
+        <span
+          key={index}
+          className="name-letter"
+        >
+          {letter === ' ' ? '\u00A0' : letter}
+        </span>
+      ))}
+    </h1>
+  )
+}
+
 export function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <h1>Keith Groves</h1>
+        <Name />
         <p className="tagline">Technology Leader & Chief Technologist</p>
         <div className="contact-info">
           <a href="mailto:keithalgroves@gmail.com">keithalgroves@gmail.com</a>

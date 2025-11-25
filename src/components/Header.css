@@ -39,13 +39,38 @@
 }
 
 .header::after {
-  background: radial-gradient(600px 400px at 50% 10%, rgba(78, 195, 224, 0.12), transparent 70%);
+  background: radial-gradient(600px 400px at 50% 10%, #4dc2e01f, transparent 70%);
   filter: blur(40px);
   opacity: .4;
 }
 
 [data-theme='light'] .header::after {
   background: radial-gradient(600px 400px at 50% 10%, rgba(17, 133, 163, 0.08), transparent 70%);
+}
+
+.name-letter {
+  display: inline-block;
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    color 0.4s ease;
+}
+
+[data-theme='dark'] .name-letter {
+  color: var(--primary);
+}
+
+[data-theme='dark'] .name-letter:hover {
+  transform: translateY(-10px);
+  color: #fff;
+}
+
+[data-theme='light'] .name-letter {
+  color: var(--primary);
+}
+
+[data-theme='light'] .name-letter:hover {
+  transform: translateY(-10px);
+  color: #333;
 }
 
 @keyframes heroGradient {
@@ -61,8 +86,8 @@
 }
 
 @keyframes drift {
-  from { transform: translateY(0); }
-  to { transform: translateY(100%); }
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(24px, 24px); }
 }
 
 .header-content h1 {
