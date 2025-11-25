@@ -18,7 +18,7 @@
 
 .project-card {
   position: relative;
-  background: radial-gradient(circle at 0% 0%, rgba(143, 188, 143, 0.08), transparent 55%),
+  background: radial-gradient(circle at 0% 0%, rgba(17, 133, 163, 0.1), transparent 55%),
     linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   padding: var(--space-xl) var(--space-lg);
   border-radius: var(--radius-lg);
@@ -33,7 +33,7 @@
 }
 
 [data-theme='light'] .project-card {
-  background: radial-gradient(circle at 0% 0%, rgba(90, 138, 90, 0.05), transparent 55%),
+  background: radial-gradient(circle at 0% 0%, rgba(17, 133, 163, 0.05), transparent 55%),
     linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
 }
 
@@ -41,12 +41,12 @@
   transform: translateY(-8px) scale(1.01);
   border-color: var(--accent);
   box-shadow: var(--shadow-strong), var(--glow-accent);
-  background: radial-gradient(circle at 0% 0%, rgba(143, 188, 143, 0.12), transparent 60%),
+  background: radial-gradient(circle at 0% 0%, rgba(78, 195, 224, 0.12), transparent 60%),
     linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.025));
 }
 
 [data-theme='light'] .project-card:hover {
-  background: radial-gradient(circle at 0% 0%, rgba(90, 138, 90, 0.08), transparent 60%),
+  background: radial-gradient(circle at 0% 0%, rgba(17, 133, 163, 0.08), transparent 60%),
     linear-gradient(180deg, rgba(0,0,0,0.025), rgba(0,0,0,0.015));
 }
 
@@ -89,8 +89,8 @@
   font-weight: 500;
   padding: 0.4rem 0.85rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(143, 188, 143, 0.35);
-  background: radial-gradient(circle at 0% 0%, rgba(143, 188, 143, 0.12), transparent 55%),
+  border: 1px solid rgba(17, 133, 163, 0.35);
+  background: radial-gradient(circle at 0% 0%, rgba(17, 133, 163, 0.12), transparent 55%),
     var(--surface);
   color: var(--text);
   text-decoration: none;
@@ -106,7 +106,7 @@
 
 .project-link:hover {
   border-color: var(--accent);
-  background: radial-gradient(circle at 0% 0%, rgba(143, 188, 143, 0.2), transparent 60%),
+  background: radial-gradient(circle at 0% 0%, rgba(78, 195, 224, 0.2), transparent 60%),
     var(--surface-2);
   transform: translateY(-1px);
   box-shadow: var(--glow-accent);

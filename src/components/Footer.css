@@ -13,12 +13,12 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(800px 400px at 50% -10%, rgba(143, 188, 143, 0.08), transparent 70%);
+  background: radial-gradient(800px 400px at 50% -10%, rgba(17, 133, 163, 0.1), transparent 70%);
   opacity: .9;
 }
 
 [data-theme='light'] .footer::before {
-  background: radial-gradient(800px 400px at 50% -10%, rgba(90, 138, 90, 0.05), transparent 70%);
+  background: radial-gradient(800px 400px at 50% -10%, rgba(17, 133, 163, 0.06), transparent 70%);
 }
 
 .footer .container {
