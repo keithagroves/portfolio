@@ -9,12 +9,19 @@ export function About() {
       <div className="container">
         <h2 className={`fade-in-up ${isVisible ? 'visible' : ''}`}>About Me</h2>
         <p className={`about-text fade-in-up ${isVisible ? 'visible' : ''} stagger-1`}>
-          Engineering leader who loves using technology to tell stories and help people learn.
-          I&apos;ve architected and delivered security-critical systems processing $200M+ in
-          cryptocurrency transactions, and more recently have been focused on building playful,
-          agentic AI experiences and tools like Enact Protocol. I especially enjoy creating
-          interactive projects&mdash;from teaching kids to code to bringing AI characters like
-          talking avatars to life.
+          I&apos;m focused on the infrastructure layer for AI agents&mdash;the tooling
+          and execution environments that let agents safely interact with the world.
+          I created the <a href="https://agentactions.xyz" target="_blank" rel="noopener noreferrer">Agent Actions</a> open
+          standard and am building <a href="https://enact.tools" target="_blank" rel="noopener noreferrer">Enact</a>,
+          a platform for AI tool discovery and sandboxed execution.
+        </p>
+        <p className={`about-text fade-in-up ${isVisible ? 'visible' : ''} stagger-2`}>
+          Before diving into AI infrastructure, I was CTO at Defispot&mdash;Norway&apos;s largest
+          decentralized exchange&mdash;where I led a team building security-critical systems
+          processing $200M+ in crypto transactions.
+          I&apos;ve also spent years teaching&mdash;from UC San Diego to nonprofits serving
+          underserved communities&mdash;because I believe the best technology should be
+          accessible to everyone.
         </p>
       </div>
     </section>

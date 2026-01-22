@@ -21,7 +21,7 @@ export function Header() {
     <header className="header">
       <div className="header-content">
         <Name />
-        <p className="tagline">Technology Leader & Chief Technologist</p>
+        <p className="tagline">Building infrastructure for AI agents</p>
         <div className="contact-info">
           <a href="mailto:keithalgroves@gmail.com">keithalgroves@gmail.com</a>
           <span className="separator">•</span>
