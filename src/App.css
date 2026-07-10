@@ -1,40 +1,228 @@
 .app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.container {
-  max-width: 1120px;
+  max-width: 42rem;
   margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding: 6rem 1.5rem 4rem;
 }
 
-/* Subtle vignette for depth */
-.app::after {
-  content: "";
+@media (max-width: 640px) {
+  .app {
+    padding-top: 4rem;
+  }
+}
+
+.app > section {
+  margin-top: 5rem;
+}
+
+.section-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+  margin-bottom: 1.75rem;
+}
+
+/* Hero */
+.hero h1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.hero .tagline {
+  margin-top: 0.5rem;
+  font-size: 1.0625rem;
+  color: var(--muted);
+}
+
+.hero .bio {
+  margin-top: 1.5rem;
+  max-width: 38rem;
+}
+
+.hero .bio + .bio {
+  margin-top: 0.75rem;
+}
+
+.hero-links {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.hero-links a {
+  color: var(--muted);
+}
+
+.hero-links a:hover {
+  color: var(--accent);
+}
+
+.resume-link {
+  color: var(--text) !important;
+}
+
+.resume-link:hover {
+  color: var(--accent) !important;
+}
+
+/* Work */
+.work-item + .work-item {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.work-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.work-header h3 {
+  font-size: 1.0625rem;
+}
+
+.work-header h3 a {
+  text-decoration: none;
+}
+
+.work-header h3 a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.work-meta {
+  font-size: 0.875rem;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+.work-item p {
+  margin-top: 0.625rem;
+  font-size: 0.9583rem;
+}
+
+.work-link {
+  display: inline-block;
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.work-video {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* Experience */
+.job {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1.25rem;
+}
+
+.job + .job {
+  margin-top: 1.5rem;
+}
+
+.job .period {
+  font-size: 0.875rem;
+  color: var(--faint);
+  padding-top: 0.1rem;
+  white-space: nowrap;
+}
+
+.job h3 {
+  font-size: 0.9583rem;
+  font-weight: 550;
+}
+
+.job h3 .company {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.job p {
+  margin-top: 0.25rem;
+  font-size: 0.9167rem;
+}
+
+@media (max-width: 540px) {
+  .job {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+/* Footer */
+.footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  color: var(--faint);
+}
+
+.footer p {
+  color: var(--faint);
+  font-size: 0.875rem;
+}
+
+/* Theme toggle */
+.theme-toggle {
   position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(60% 40% at 50% 0%, rgba(0,0,0,0.25), transparent 60%);
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--faint);
+  cursor: pointer;
+  transition: color 0.15s ease;
 }
 
-[data-theme='light'] .app::after {
-  background: radial-gradient(60% 40% at 50% 0%, rgba(0,0,0,0.05), transparent 60%);
+.theme-toggle:hover {
+  color: var(--text);
 }
 
-section {
-  padding-block: var(--space-3xl);
+.theme-toggle .toggle-icon {
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 var(--space-md);
+/* Entrance */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
-
-  section {
-    padding-block: var(--space-2xl);
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
+.app > * {
+  animation: rise 0.5s ease-out both;
+}
+
+.app > *:nth-child(2) { animation-delay: 0.05s; }
+.app > *:nth-child(3) { animation-delay: 0.1s; }
+.app > *:nth-child(4) { animation-delay: 0.15s; }
+.app > *:nth-child(5) { animation-delay: 0.2s; }

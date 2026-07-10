@@ -1,42 +1,35 @@
-import './Header.css'
-
-function Name() {
-  const name = "Keith Groves"
-  return (
-    <h1 aria-label={name}>
-      {name.split('').map((letter, index) => (
-        <span
-          key={index}
-          className="name-letter"
-        >
-          {letter === ' ' ? '\u00A0' : letter}
-        </span>
-      ))}
-    </h1>
-  )
-}
-
 export function Header() {
   return (
-    <header className="header">
-      <div className="header-content">
-        <Name />
-        <p className="tagline">Building infrastructure for AI agents</p>
-        <div className="contact-info">
-          <a href="mailto:keithalgroves@gmail.com">keithalgroves@gmail.com</a>
-          <span className="separator">•</span>
-          <a href="tel:+17603008629">(760) 300-8629</a>
-          <span className="separator">•</span>
-          <span>Oceanside, CA</span>
-        </div>
-        <div className="social-links">
-          <a href="https://linkedin.com/in/keithalgroves" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          <a href="https://github.com/keithagroves" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-        </div>
+    <header className="hero">
+      <h1>Keith Groves</h1>
+      <p className="tagline">
+        Agentic developer — production AI systems. MCP contributor, former fintech CTO.
+      </p>
+      <p className="bio">
+        I work at the agent layer: Model Context Protocol, tool discovery and
+        orchestration, and the plumbing that makes agents reliable with sensitive
+        data. I contribute to the MCP Skills Extension spec — my skills-over-mcp
+        implementation is cited as foundational work for the official
+        Skills-as-Resources reference implementation.
+      </p>
+      <p className="bio">
+        Previously CTO of a security-critical fintech platform that processed
+        $200M+ in transactions. Based in Oceanside, CA.
+      </p>
+      <div className="hero-links">
+        <a href={`${import.meta.env.BASE_URL}Keith_Groves_Resume.pdf`} className="resume-link" download>
+          Resume
+        </a>
+        <a href="mailto:keithalgroves@gmail.com">Email</a>
+        <a href="https://github.com/keithagroves" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/keithalgroves" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a href="https://hyixteam.com" target="_blank" rel="noopener noreferrer">
+          Hyix
+        </a>
       </div>
     </header>
   )

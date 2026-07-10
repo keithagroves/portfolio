@@ -1,9 +1,6 @@
 import { Header } from './components/Header'
-import { About } from './components/About'
-import { Skills } from './components/Skills'
+import { Work } from './components/Work'
 import { Experience } from './components/Experience'
-import { Projects } from './components/Projects'
-import { Education } from './components/Education'
 import { Footer } from './components/Footer'
 import { ThemeToggle } from './components/ThemeToggle'
 import './App.css'
@@ -13,11 +10,8 @@ function App() {
     <div className="app">
       <ThemeToggle />
       <Header />
-      <About />
-      <Skills />
+      <Work />
       <Experience />
-      <Projects />
-      <Education />
       <Footer />
     </div>
   )

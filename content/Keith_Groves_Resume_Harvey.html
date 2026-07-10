@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Keith Groves — Resume</title>
+<style>
+  @page { size: letter; margin: 0.55in 0.65in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.42;
+    color: #1a1a1a;
+  }
+  h1 { font-size: 19pt; letter-spacing: 0.5px; text-align: center; }
+  .subtitle {
+    text-align: center; font-size: 10pt; font-weight: 600; color: #14506e;
+    margin-top: 2pt;
+  }
+  .contact {
+    text-align: center; font-size: 8.6pt; color: #444; margin-top: 3pt;
+  }
+  h2 {
+    font-size: 10pt; text-transform: uppercase; letter-spacing: 0.8px;
+    color: #14506e; border-bottom: 1px solid #b9cdd8;
+    margin: 11pt 0 5pt; padding-bottom: 2pt;
+  }
+  .role {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-top: 7pt;
+  }
+  .role h3 { font-size: 10pt; }
+  .role .dates { font-size: 8.6pt; color: #555; white-space: nowrap; }
+  .role-sub { font-size: 8.8pt; font-style: italic; color: #555; margin-bottom: 2pt; }
+  ul { margin: 2pt 0 0 14pt; }
+  li { margin-bottom: 2.5pt; }
+  .skills p { margin-bottom: 2.5pt; }
+  .skills b { color: #14506e; }
+  p.summary { margin-top: 2pt; }
+  b { font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>KEITH GROVES</h1>
+<div class="subtitle">Product Leader — AI for Legal &amp; Professional Services · Founder · Former Fintech CTO</div>
+<div class="contact">
+  Oceanside, CA · (760) 300-8629 · keithalgroves@gmail.com · linkedin.com/in/keithalgroves · github.com/keithagroves · hyixteam.com
+</div>
+
+<h2>Summary</h2>
+<p class="summary">
+Product-minded founder and former CTO who builds AI products for law firms — owning vision, strategy, and delivery end to end.
+I run <b>Hyix</b>, an AI consultancy for personal injury firms, where the product is exactly the problem Vault solves: getting
+privileged documents into an AI system firms actually trust, then making those documents searchable, extractable, and useful.
+Deep technical fluency in retrieval architectures, document processing pipelines, and the security and access-control model
+sensitive data demands — I've usually built the first version myself. Contributor to the <b>Model Context Protocol</b> spec,
+driving consensus among maintainers from Anthropic, Google, AWS, GitHub, and Databricks. Previously led a 7-person team as
+CTO of a fintech platform that processed $200M+ in transactions.
+</p>
+
+<h2>Product &amp; Domain Highlights</h2>
+<ul>
+  <li><b>Legal document AI in production:</b> medical record intelligence for injury firms — 400-page records into summaries, treatment timelines, and chronologies; intake automation; demand-letter drafting. Discovery done by sitting with intake teams, paralegals, and attorneys to map how cases actually move.</li>
+  <li><b>Sensitive-data trust model:</b> designed local-LLM pipelines that strip PII from privileged case materials before any third-party model sees them, with audit trails and access controls that hold up to client scrutiny.</li>
+  <li><b>Retrieval &amp; AI search:</b> production RAG and semantic search (Pinecone, LangChain, AWS Bedrock); MCP spec work on discovery and retrieval of agent capabilities (skill:// URI scheme, SEP-2640).</li>
+  <li><b>Enterprise integration strategy:</b> ship into each firm's existing stack — case management systems, document stores, SSO/OAuth (designed a passwordless Web3Auth rollout) — rather than imposing a new one.</li>
+</ul>
+
+<h2>Experience</h2>
+
+<div class="role"><h3>Founder &amp; Product Lead · Hyix LLC</h3><span class="dates">Sep 2019 – Present</span></div>
+<div class="role-sub">AI products &amp; automation for legal and professional services · hyixteam.com</div>
+<ul>
+  <li>Own product vision, roadmap, packaging, and pricing for a legal-AI product line: AI opportunity assessments → workflow automation → medical record intelligence → firm-wide secure AI tools → ongoing AI partnership retainers.</li>
+  <li>Run a structured discovery-to-delivery framework (Explore → Engineer → Elevate): workflow audits with firm staff, prioritized roadmaps with ROI estimates, then iteration against measured usage. First production automation typically live in under 30 days.</li>
+  <li>Built the trust architecture law firms require before adopting AI: local anonymization models in front of frontier models (AWS Bedrock), unified in a single interface so staff never context-switch between tools.</li>
+  <li>Delivered enterprise-grade integrations across clients' existing systems — n8n/Make/Zapier orchestration, Supabase, Pinecone retrieval, document extraction pipelines; Docker/Kubernetes/Terraform where high availability is required.</li>
+</ul>
+
+<div class="role"><h3>Contributor &amp; Reference Implementer · Model Context Protocol — Skills Working Group</h3><span class="dates">2026 – Present</span></div>
+<div class="role-sub">Open standard for how AI agents discover and use tools, skills, and knowledge · modelcontextprotocol.io</div>
+<ul>
+  <li>My skills-over-mcp implementation is cited as foundational work for the official Skills-as-Resources reference implementation and SDK; contributed to SEP-2640, the skill:// URI scheme in the draft Skills Extension spec.</li>
+  <li>Spec work is product work: drove alignment across maintainers from Anthropic, Google, AWS, GitHub, and Databricks with competing priorities, and coordinated with the Registry, Agents, and Primitive Grouping working groups.</li>
+  <li>Also creator of Enact (enact.tools), an open-source Agent Skills registry — sandboxed execution in Dagger containers, signed and semantically versioned releases.</li>
+</ul>
+
+<div class="role"><h3>Software Consultant · Neopolis.ai</h3><span class="dates">Mar 2025 – Sep 2025</span></div>
+<ul>
+  <li>Built an automated AI interviewing platform (React, Django) handling candidate screening end to end; drove build-vs-buy and vendor migration decisions across Vapi, OpenAI Realtime, and LiveKit against measured latency and cost targets.</li>
+</ul>
+
+<div class="role"><h3>Security Consultant · Biorbank / BiorVault</h3><span class="dates">Aug 2025 – Present</span></div>
+<ul>
+  <li>Security audits across a biobank data platform; designed passwordless Web3Auth authentication integrated with the Moon digital credit card platform — enterprise auth and access-control design for regulated, sensitive data.</li>
+</ul>
+
+<div class="role"><h3>Chief Technology Officer · Defispot</h3><span class="dates">Mar 2022 – Oct 2024</span></div>
+<ul>
+  <li>Owned the technical roadmap with the CEO and exec team — prioritization, hiring, and shipping-speed-vs-security trade-offs — for a security-critical fintech platform that processed <b>$200M+</b> in cross-chain transactions.</li>
+  <li>Led a 7-person cross-functional engineering team; defined and shipped multi-chain swap flows across EVM and UTXO chains and an in-house threat-detection system that caught exploits and compliance issues before production.</li>
+</ul>
+
+<div class="role"><h3>Director of Education · The League of Amazing Programmers</h3><span class="dates">Mar 2016 – Feb 2023</span></div>
+<ul>
+  <li>Grew the program 5× (100 → 500+ concurrent students) by redesigning the product for remote delivery on AWS-based dev environments; owned adoption and retention metrics, instructor hiring, and the teaching playbook.</li>
+</ul>
+
+<h2>Technical Fluency</h2>
+<div class="skills">
+  <p><b>AI / Retrieval:</b> RAG &amp; semantic search (Pinecone, LangChain) · document extraction pipelines · MCP · local LLMs (Ollama, llama.cpp) · PII anonymization · AWS Bedrock · prompt engineering</p>
+  <p><b>Platform &amp; Integrations:</b> REST/API design · SSO, OAuth, Web3Auth · n8n / Make / Zapier · Supabase · TypeScript · Python · React · Django · Node.js</p>
+  <p><b>Infrastructure &amp; Security:</b> AWS · Kubernetes · Terraform · Docker · Dagger sandboxing · signed releases · audit trails &amp; access controls · CI/CD</p>
+</div>
+
+<h2>Education</h2>
+<p><b>B.S. Computer Science</b> · California State University, Monterey Bay &nbsp;·&nbsp; Former instructor, UC San Diego Extended Studies (four-level Java certificate program, 2018–2023)</p>
+
+</body>
+</html>
