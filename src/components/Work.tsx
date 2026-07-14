@@ -3,8 +3,11 @@ interface WorkItem {
   meta: string
   description: string
   link?: { href: string; label: string }
+  image?: { src: string; alt: string }
   video?: { src: string; poster: string }
 }
+
+const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`
 
 const items: WorkItem[] = [
   {
@@ -13,6 +16,7 @@ const items: WorkItem[] = [
     description:
       'My software consultancy, pivoted into AI consulting for personal injury law firms — automating record review, intake, and demand-letter drafting while client files stay under the firm’s control. Engagements run Explore → Engineer → Elevate, from workflow assessments to an AI team on retainer.',
     link: { href: 'https://hyixteam.com', label: 'hyixteam.com ↗' },
+    image: { src: asset('hyix.webp'), alt: 'Hyix landing page' },
   },
   {
     title: 'CodeSwim',
@@ -20,6 +24,15 @@ const items: WorkItem[] = [
     description:
       'An IDE for browsing a codebase as diagrams. It opens a folder and renders its markdown files as a navigable diagram tree — the diagrams are the spec; the code implements them.',
     link: { href: 'https://codeswim.xyz', label: 'codeswim.xyz ↗' },
+    image: { src: asset('codeswim-demo.gif'), alt: 'CodeSwim rendering a codebase as diagrams' },
+  },
+  {
+    title: 'BiorSwap',
+    meta: 'Security consultant · DEX',
+    description:
+      'A multi-chain decentralized exchange for trading 5,000+ crypto assets. I led security audits across the stack and designed its passwordless Web3Auth authentication, integrated with the Moon digital credit card platform.',
+    link: { href: 'https://biorswap.com', label: 'biorswap.com ↗' },
+    image: { src: asset('biorswap.webp'), alt: 'BiorSwap decentralized exchange interface' },
   },
   {
     title: 'Enact',
@@ -27,6 +40,7 @@ const items: WorkItem[] = [
     description:
       'An open-source Agent Skills registry that lets AI assistants discover and run CLI tools through MCP. Tools execute inside Dagger containers for isolation, with cryptographically signed and semantically versioned releases.',
     link: { href: 'https://enact.tools', label: 'enact.tools ↗' },
+    image: { src: asset('enact.webp'), alt: 'Enact — the Agent Skills platform' },
   },
   {
     title: 'skills-over-mcp',
@@ -44,8 +58,8 @@ const items: WorkItem[] = [
     description:
       'A physics-driven rocket game about flying cargo runs on a fuel budget — manage thrust and velocity, land softly, don’t run dry. Early demo below.',
     video: {
-      src: `${import.meta.env.BASE_URL}visitor-demo.mp4`,
-      poster: `${import.meta.env.BASE_URL}visitor-poster.jpg`,
+      src: asset('visitor-demo.mp4'),
+      poster: asset('visitor-poster.jpg'),
     },
   },
 ]
@@ -69,19 +83,24 @@ export function Work() {
             <span className="work-meta">{item.meta}</span>
           </div>
           <p>{item.description}</p>
-          {item.link && (
-            <a
-              className="work-link"
-              href={item.link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {item.link.label}
-            </a>
-          )}
+          {item.image &&
+            (item.link ? (
+              <a
+                className="work-media"
+                href={item.link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={item.image.src} alt={item.image.alt} loading="lazy" />
+              </a>
+            ) : (
+              <span className="work-media">
+                <img src={item.image.src} alt={item.image.alt} loading="lazy" />
+              </span>
+            ))}
           {item.video && (
             <video
-              className="work-video"
+              className="work-media work-video"
               src={item.video.src}
               poster={item.video.poster}
               controls
@@ -91,6 +110,16 @@ export function Work() {
               preload="none"
               aria-label="Visitor gameplay demo"
             />
+          )}
+          {item.link && (
+            <a
+              className="work-link"
+              href={item.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.link.label}
+            </a>
           )}
         </div>
       ))}
