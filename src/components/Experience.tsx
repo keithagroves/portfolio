@@ -9,11 +9,19 @@ interface Job {
 const jobs: Job[] = [
   {
     period: '2019 – now',
-    title: 'Founder & AI Automation Consultant',
+    title: 'Founder & Principal AI/Software Consultant',
     company: 'Hyix LLC',
     website: 'https://hyixteam.com',
     summary:
-      'Started as a full-stack software consultancy; pivoted to AI adoption for businesses — custom agents, workflow automation, and local LLM pipelines for privileged data, now focused on personal injury law firms. First production automation typically ships in under 30 days.',
+      'Started as a full-stack software consultancy; pivoted to AI adoption for businesses — custom agents, workflow automation, and PII-safe pipelines for privileged data, including a production deployment for a private investigation firm. First production automation typically ships in under 30 days.',
+  },
+  {
+    period: '2025 – now',
+    title: 'Chief Technology Officer',
+    company: 'Rocket Music Lab',
+    website: 'https://rocketmusiclab.com',
+    summary:
+      'Music-education app teaching kids piano and guitar: one Flutter codebase for web, iOS, and Android on Supabase, live MIDI capture, and a Rust pitch checker compiled to WebAssembly. One of three engineers on a cross-functional team of 5 with a design partner and a music teacher.',
   },
   {
     period: '2025 – now',
@@ -42,6 +50,13 @@ const jobs: Job[] = [
     company: 'Defispot',
     summary:
       'Led a 7-person team behind a fintech platform processing $200M+ in cross-chain transactions; built in-house threat detection for exploits and compliance issues.',
+  },
+  {
+    period: '2023 – now',
+    title: 'Part-Time Instructor',
+    company: 'The League of Amazing Programmers',
+    summary:
+      'Teach Java, Python, and AI-assisted development with Claude Code to students on weekends at a 501(c)(3) nonprofit.',
   },
   {
     period: '2016 – 2023',

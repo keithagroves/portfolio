@@ -14,9 +14,17 @@ const items: WorkItem[] = [
     title: 'Hyix',
     meta: 'Founder · 2019–present',
     description:
-      'My software consultancy, pivoted into AI consulting for personal injury law firms — automating record review, intake, and demand-letter drafting while client files stay under the firm’s control. Engagements run Explore → Engineer → Elevate, from workflow assessments to an AI team on retainer.',
+      'My software consultancy, pivoted into AI implementation for high-trust, document-heavy teams. For a private investigation firm, I built a workflow that turns interview notes into case summaries while stripping PII before anything reaches a cloud model, cutting summary time from four hours to one. Engagements run Explore → Engineer → Elevate, from workflow assessments to an AI team on retainer.',
     link: { href: 'https://hyixteam.com', label: 'hyixteam.com ↗' },
     image: { src: asset('hyix.webp'), alt: 'Hyix landing page' },
+  },
+  {
+    title: 'Rocket Music Lab',
+    meta: 'CTO · 2025–present',
+    description:
+      'A piano and guitar practice platform for music teachers and schools. Students practice assigned lessons and every note is graded as they play — piano through a MIDI keyboard or on-screen keys, guitar through the microphone with real-time pitch detection. Teachers see who practiced and how it went, and can use the built-in courses or write their own with synced sheet music and tab.',
+    link: { href: 'https://rocketmusiclab.com', label: 'rocketmusiclab.com ↗' },
+    image: { src: asset('rocketmusiclab.webp'), alt: 'Rocket Music Lab landing page' },
   },
   {
     title: 'CodeSwim',
