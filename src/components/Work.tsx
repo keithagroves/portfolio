@@ -27,6 +27,17 @@ const items: WorkItem[] = [
     image: { src: asset('rocketmusiclab.webp'), alt: 'Rocket Music Lab landing page' },
   },
   {
+    title: 'How Much of a Transformer Is Code?',
+    meta: 'Interpretability research · 2026',
+    description:
+      'An audit protocol that prices interpretability claims on real model weights (Qwen3-0.6B, Pythia-410M). I replaced attention heads and MLP layers with readable programs, installed them in the forward pass, and measured the damage against position-shuffle and zero-ablation controls. The routing of 36% of heads and 21% of MLP layers substituted at +0.88 nats, and the controls caught a rule matching 83–92% of an induction head’s choices as an attention-sink artifact.',
+    link: {
+      href: 'https://keithagroves.github.io/how-much-transformer-is-code/',
+      label: 'Read the paper ↗',
+    },
+    image: { src: asset('transformer-code.webp'), alt: 'How Much of a Transformer Is Code? paper' },
+  },
+  {
     title: 'CodeSwim',
     meta: 'Desktop app · Electron',
     description:
